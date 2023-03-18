@@ -20,6 +20,10 @@ public class Point implements Cloneable {
     System.out.println();
   }
 
+  public void moveRight() {
+    this.xPos += 1;
+  }
+
   @Override
   public Object clone() throws CloneNotSupportedException {
     return super.clone();

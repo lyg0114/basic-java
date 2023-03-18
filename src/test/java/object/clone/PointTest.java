@@ -25,4 +25,21 @@ public class PointTest {
 
     assertFalse(org == cpy);
   }
+
+  @Test
+  public void testClone2() {
+    Point org = new Point(3, 5);
+    Point cpy = null;
+    try {
+      cpy = (Point) org.clone();
+
+      org.moveRight();
+      org.showPosition();
+      cpy.showPosition();
+
+    } catch (CloneNotSupportedException e) {
+      e.printStackTrace();
+    }
+
+  }
 }
