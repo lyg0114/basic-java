@@ -12,7 +12,7 @@ public class CalculatorByLizzy implements Calculator {
     return lizzyPlus(x, y);
   }
 
-  private int lizzyPlus(int x, int y) {
+  protected int lizzyPlus(int x, int y) {
     return x + y;
   }
 
