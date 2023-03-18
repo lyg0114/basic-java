@@ -1,4 +1,4 @@
-package object;
+package object.equals;
 
 /**
  * @author : iyeong-gyo

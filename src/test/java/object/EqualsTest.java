@@ -1,5 +1,7 @@
 package object;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import object.equals.INum;
 import org.junit.Test;
 
 /**
@@ -7,7 +9,7 @@ import org.junit.Test;
  * @package : object
  * @since : 2023/03/18
  */
-public class INumTest {
+public class EqualsTest {
 
   @Test
   public void testEquals() {
@@ -17,7 +19,16 @@ public class INumTest {
 
     assertFalse(iNum1.equals(iNum2));
     assertFalse(iNum1.equals(iNum3));
-
   }
 
+  @Test
+  public void testStringEquals() {
+    String str1 = "test str1";
+    String str2 = "test str2";
+    String str3 = "test str1";
+
+    assertFalse(str1.equals(str2));
+    assertTrue(str1.equals(str3));
+
+  }
 }
