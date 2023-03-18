@@ -12,8 +12,15 @@ import org.junit.Test;
 public class CalculatorByLizzyTest extends CalculatorByLizzy {
 
   @Test
-  public void testPlus() {
+  public void testPlus1() {
     CalculatorByLizzy calculatorByLizzy = new CalculatorByLizzy();
     assertEquals(3, calculatorByLizzy.lizzyPlus(1, 2));
   }
+
+  @Test
+  public void testPlus2() {
+    CalculatorByKyle calculatorByKyle = new CalculatorByKyle();
+    assertEquals(3, calculatorByKyle.lizzyPlus(1, 2));
+  }
+
 }
