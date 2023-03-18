@@ -1,7 +1,8 @@
-package object;
+package object.equals;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import object.equals.INum;
+
 import org.junit.Test;
 
 /**
