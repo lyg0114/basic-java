@@ -1,5 +1,7 @@
 package object.equals;
 
+import java.net.HttpURLConnection;
+
 /**
  * @author : iyeong-gyo
  * @package : object
