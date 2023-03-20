@@ -8,7 +8,7 @@ import java.util.Map;
  * @package : object
  * @since : 2023/03/18
  */
-public class HNum {
+public class HashCode1 {
 
   public static void main(String[] args) {
     Map<User, User> users = new HashMap<>();
