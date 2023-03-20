@@ -5,7 +5,18 @@ package generic;
  * @package : generic
  * @since : 2023/03/20
  */
-public class Box {
+
+public class Boxing {
+
+  public static void main(String[] args) {
+    Box box = new Box();
+    box.setObj(new Apple());
+    box.setObj(new Orange());
+  }
+}
+
+
+class Box {
 
   private Object obj;
 
