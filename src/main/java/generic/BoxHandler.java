@@ -39,7 +39,15 @@ class Box3<T> {
   }
 }
 
-class Toy {
+class Plastic {
+
+  @Override
+  public String toString() {
+    return "I am a Plastic";
+  }
+}
+
+class Toy extends Plastic {
 
   @Override
   public String toString() {
