@@ -8,20 +8,29 @@ package generic;
 public class BoxHandler {
 
   public static void main(String[] args) {
-    Box3<Car> box = new Box3<>();
+    Box3<Plastic> box = new Box3<>();
+
+    Plastic plastic = new Plastic();
+    Toy toy = new Toy();
+    Car car = new Car();
+
+
+    inBox(box, car);
     outBox(box);
 
   }
 
   //상한제한
   //상속관계상 값을 할당하는것은 허용되지 않는다.
-  public static Toy outBox(Box3<? extends Toy> box) {
-    Toy toy = box.get();
-    System.out.println(toy);
-    return toy;
+  //자식 클래스는 부모 클래스를 참조할 수 없음
+  public static <T> T outBox(Box3<? extends T> box) {
+    return box.get();
   }
 
-  public static void inBox(Box3<? super Toy> box, Toy nToy) {
+  //하한제한
+  //상속관계상 값을 조회하는것은 허용되지 않는다.
+  //자식 클래스는 부모 클래스를 참조할 수 없음
+  public static <T> void inBox(Box3<? super T> box, T nToy) {
     box.set(nToy);
   }
 }
