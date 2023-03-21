@@ -13,7 +13,7 @@ import org.junit.Test;
 public class CarEcarExample {
 
   @Test
-  public void testCar() {
+  public void sortCarTest() {
     List<Car> list = new ArrayList<>();
     list.add(new Car(1200));
     list.add(new Car(3000));
@@ -21,11 +21,18 @@ public class CarEcarExample {
     list.add(new ECar(2101));
     list.add(new ECar(3432));
     Collections.sort(list);
-
     for (Car car : list) {
       System.out.println(car.getDisp() + " " + car.toString());
     }
 
+    int index = Collections.binarySearch(list, new ECar(2101));
+    System.out.println("index = " + index);
+
+    Car[] cars = new Car[10];
+    cars[0] = new Car(123);
+    cars[1] = new Car(123);
+    cars[2] = new Car(123);
+    Collections.addAll(list, cars);
   }
 }
 
