@@ -42,3 +42,19 @@ class Toy {
   }
 }
 
+class Car extends Toy {
+
+  @Override
+  public String toString() {
+    return "I am a Car";
+  }
+}
+
+class Robot extends Toy {
+
+  @Override
+  public String toString() {
+    return "I am a Robot";
+  }
+}
+
