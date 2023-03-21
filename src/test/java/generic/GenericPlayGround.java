@@ -1,17 +1,18 @@
-package generic.v2;
+package generic;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import org.junit.Test;
 
 /**
  * @author : iyeong-gyo
- * @package : generic.v2
+ * @package : generic
  * @since : 2023/03/21
  */
-public class CookGenerics {
+public class GenericPlayGround {
 
-  public static void main(String[] args) {
+  @Test
+  public void testCompare() {
     List<String> smples = new ArrayList<>();
     smples.add("c");
     smples.add("a");
@@ -19,20 +20,9 @@ public class CookGenerics {
     smples.add("f");
     smples.add("b");
 
-    Comp comp = new Comp();
-    smples.sort(comp);
+    smples.sort((o1, o2) -> o1.compareTo(o2));
     for (String smple : smples) {
       System.out.println("smple = " + smple);
     }
   }
 }
-
-class Comp implements Comparator<String> {
-
-  @Override
-  public int compare(String o1, String o2) {
-    return o1.compareTo(o2);
-  }
-}
-
-
