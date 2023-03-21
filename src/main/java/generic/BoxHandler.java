@@ -8,15 +8,20 @@ package generic;
 public class BoxHandler {
 
   public static void main(String[] args) {
+    Box3<Car> box = new Box3<>();
+    outBox(box);
 
   }
 
-  public static void outBox(Box3<Toy> box) {
+  //상한제한
+  //상속관계상 값을 할당하는것은 허용되지 않는다.
+  public static Toy outBox(Box3<? extends Toy> box) {
     Toy toy = box.get();
     System.out.println(toy);
+    return toy;
   }
 
-  public static void inBox(Box3<Toy> box, Toy nToy) {
+  public static void inBox(Box3<? super Toy> box, Toy nToy) {
     box.set(nToy);
   }
 }
