@@ -1,4 +1,4 @@
-package generic;
+package generic.v1;
 
 /**
  * @author : iyeong-gyo
