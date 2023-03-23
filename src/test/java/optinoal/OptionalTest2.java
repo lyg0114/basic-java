@@ -10,28 +10,6 @@ import org.junit.Test;
  */
 public class OptionalTest2 {
 
-  @Test
-  public void stringOptional1() {
-
-    CountInfo ci = new CountInfo(null, "Republic of Korea");
-    String phone;
-    String adrs;
-
-    if (ci.getPhone() != null) {
-      phone = ci.getPhone();
-    } else {
-      phone = "There is no phone";
-    }
-
-    if (ci.getAdrs() != null) {
-      adrs = ci.getAdrs();
-    } else {
-      adrs = "There is no address.";
-    }
-
-    System.out.println(phone);
-    System.out.println(adrs);
-  }
 
   @Test
   public void stringOptional2() {
